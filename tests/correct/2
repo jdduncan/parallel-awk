@@ -1,0 +1,19 @@
+
+--------------------------------------------
+
+Test 2, non-parallel:
+Process 0 Googles: 146
+
+--------------------------------------------
+
+Test 2 with 2 processes:
+Process 1 Googles: 83
+Process 0 Googles: 63
+
+--------------------------------------------
+
+Test 2 with 4 processes:
+Process 1 Googles: 43
+Process 3 Googles: 40
+Process 2 Googles: 32
+Process 0 Googles: 31

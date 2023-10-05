@@ -1,0 +1,40 @@
+Test 19
+
+--------------------------------------------
+
+     4000 total lines to be read
+Process 0 read 4000 lines 
+ ... Block size 4, Total lines read: 4000
+1  processes, 10 line blocks, 4000 data lines.  Lines skipped:        0
+
+--------------------------------------------
+
+     8000 total lines to be read
+Process 1 read 2000 lines 
+Process 0 read 2000 lines 
+ ... Block size 8, Total lines read: 4000
+2  processes, 10 line blocks, 4000 data lines.  Lines skipped:     1750
+
+--------------------------------------------
+
+     16000 total lines to be read
+Process 0 read 1007 lines 
+ ... Block size 16, Total lines read: 4000
+Process 2 read 993 lines 
+Process 1 read 1008 lines 
+Process 3 read 992 lines 
+4  processes, 10 line blocks, 4000 data lines.  Lines skipped:     2931
+
+--------------------------------------------
+
+     32000 total lines to be read
+Process 0 read 511 lines 
+ ... Block size 32, Total lines read: 4000
+Process 1 read 512 lines 
+Process 5 read 481 lines 
+Process 4 read 512 lines 
+Process 2 read 512 lines 
+Process 6 read 480 lines 
+Process 3 read 512 lines 
+Process 7 read 480 lines 
+8  processes, 10 line blocks, 4000 data lines.  Lines skipped:     3474

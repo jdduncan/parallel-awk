@@ -1,0 +1,90 @@
+#!/bin/sh
+
+line() {
+  echo
+  echo --------------------------------------------
+  echo
+}
+
+case $1 in
+ 1 | 9 | 12 | 18 | 15 | 16 | 25 | 26 | 27 | 28)
+  DATA=data-10
+  ;;
+ 29 | 30)
+  DATA=""
+  ;;
+ *)
+  DATA=data-4000
+esac
+
+case $1 in 
+ 2 | 11 | 16 )
+  # Run non-parallel, n=2, and n=4
+  line
+  echo Test $1, non-parallel:
+  ../mpawk -f test.$1.awk $DATA 
+
+  line
+  echo Test $1 with 2 processes:
+  mpiexec -n 2 ../mpawk -f test.$1.awk $DATA
+
+  line
+  echo Test $1 with 4 processes:
+  mpiexec -n 4 ../mpawk -f test.$1.awk $DATA
+  ;;
+
+ 23 | 24 | 28 | 29 | 30)
+  # Run with n=2 and n=4
+  line
+  mpiexec -n 2 ../mpawk -f test.$1.awk $DATA
+  line
+  mpiexec -n 4 ../mpawk -f test.$1.awk $DATA
+  ;;
+
+ 19 | 20 )
+  # Special run for tests 19 and 20
+  echo Test $1
+  for i in 1 2 4 8
+   do
+     line
+     echo "    " `expr $i \* 4000` total lines to be read
+     mpiexec -n $i ../mpawk -f test.$1.awk $DATA
+     echo -n $i " processes, 10 line blocks, 4000 data lines.  Lines skipped: "
+     mpiexec -n $i ../mpawk -d -f test.$1.awk $DATA | grep skip | wc -l
+  done
+  ;;
+
+ 8 | 10)
+  # Run in system awk and in non-parallel mpawk
+  line
+  echo Test $1 , system awk:
+  awk -f test.$1.awk data-NR
+  line
+  echo Test $1 , nawk:
+  nawk -f test.$1.awk data-NR
+  line
+  echo Test $1, non-parallel:
+  ../mpawk -f test.$1.awk data-NR
+  ;;
+
+ 27 | 37 | 38 | 39 | 40 | 41)
+  # Run with n=4
+  line
+  echo Test $1
+  mpiexec -n 4 ../mpawk -f test.$1.awk $DATA
+  ;;
+
+ 31)
+  # Run with n=8
+  line
+  echo Test $1
+  mpiexec -n 8 ../mpawk -f test.$1.awk 
+  ;;
+
+ *)
+  # Run with n=2
+  line
+  echo Test $1
+  mpiexec -n 2 ../mpawk -f test.$1.awk $DATA
+  ;;
+esac

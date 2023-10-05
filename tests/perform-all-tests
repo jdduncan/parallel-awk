@@ -1,0 +1,21 @@
+#!/bin/sh
+
+failure() {
+  echo test $1 failed; exit code $2
+  exit $2 
+}
+	
+for n in `ls test.*.awk | awk -F. '{ print $2 }' | sort -n`
+  do
+     echo --------- test $n ------
+     ./run-test $n > results/$n || failure $n $?
+     if [ -e correct/$n ] 
+      then 
+        sort results/$n > /tmp/current.results
+        sort correct/$n > /tmp/correct.results
+        diff /tmp/correct.results /tmp/current.results
+        rm -f /tmp/correct.results /tmp/current.results
+      else
+   	echo " .. No correct results on file for test $n"
+     fi
+done

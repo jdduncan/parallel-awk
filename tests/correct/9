@@ -1,0 +1,14 @@
+
+--------------------------------------------
+
+Test 9
+Process 0 gets line 1 and P is 0
+Process 0 gets line 2 and P is 1
+Process 0 gets line 6 and P is 2
+Process 0 gets line 7 and P is 3
+Process 0 gets line 8 and P is 4
+Process 1 gets line 3 and P is 0
+Process 1 gets line 4 and P is 1
+Process 1 gets line 5 and P is 2
+Process 1 gets line 9 and P is 3
+Process 1 gets line 10 and P is 4

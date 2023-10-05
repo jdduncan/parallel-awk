@@ -1,0 +1,35 @@
+Parallel Awk is a language for parallel programming based on Awk and MPI.
+
+It is an effort to link Awk with MPI...
+-  enabling the everyday analysis of large plain-text files 
+   to be parallelized,
+- allowing rapid prototying of parallel applications,
+- preserving the syntax and style of Awk,
+- and hiding the details of MPI.
+
+For more information, see www.parallel-awk.org
+
+This distribution is based on the "one true awk," maintained by Brian Kernighan and available from:
+
+	http://cm.bell-labs.com/cm/cs/who/bwk
+
+The files README and FIXES files are from that distribution.  The makefile
+has been edited to use "mpicc," the compiler front-end provided by MPI
+distributions, as a C compiler. The mac.code file, for building awk under Mac OS 9 and earlier, has been deleted.  The makefile.win file, for building under Windows, has not been updated (though I would welcome an update from someone).  
+
+Assuming that MPI is available, you should be able to build Parallel Awk
+on most Unix platforms simply by typing "make."  The resulting executable file is named "mpawk".
+
+
+The three sources for Parallel Awk documentation are:
+
+ * _The AWK Programming Language_ [Prentice Hall, 1988].
+ * The FIXES file, describing changes made to the base awk
+   distribution since the book was publised.
+ * The documentation specific to Parallel Awk, at
+   http://www.parallel-awk.org/spec.php
+
+- John David Duncan
+jdd@efn.org
+April, 2004
+

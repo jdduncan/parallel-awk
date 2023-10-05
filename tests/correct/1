@@ -1,0 +1,14 @@
+
+--------------------------------------------
+
+Test 1
+Process 0 gets line 2
+Process 0 gets line 4
+Process 0 gets line 6
+Process 0 gets line 8
+Process 0 gets line 10
+Process 1 gets line 1
+Process 1 gets line 3
+Process 1 gets line 5
+Process 1 gets line 7
+Process 1 gets line 9

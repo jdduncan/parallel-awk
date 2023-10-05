@@ -1,0 +1,8 @@
+
+--------------------------------------------
+
+Test 36
+Node 0 sending message of length 20042
+Node 0 got a message of length 20141
+Node 1 sending message of length 20141
+Node 1 got a message of length 20042

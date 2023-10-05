@@ -1,0 +1,30 @@
+
+--------------------------------------------
+
+Test 16, non-parallel:
+RANK: 0
+dog: 0
+cat: 0
+freddie: 0
+3: 0
+a (which is 3): 0
+
+--------------------------------------------
+
+Test 16 with 2 processes:
+RANK: 0
+dog: 0
+cat: 0
+freddie: 1
+3: 1
+a (which is 3): 1
+
+--------------------------------------------
+
+Test 16 with 4 processes:
+RANK: 0
+dog: 2
+cat: 0
+freddie: 3
+3: 3
+a (which is 3): 3

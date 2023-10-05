@@ -1,0 +1,15 @@
+
+--------------------------------------------
+
+Test 11, non-parallel:
+Process 0 Googles: 146
+
+--------------------------------------------
+
+Test 11 with 2 processes:
+Process 0 Googles: 146
+
+--------------------------------------------
+
+Test 11 with 4 processes:
+Process 0 Googles: 146

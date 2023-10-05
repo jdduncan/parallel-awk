@@ -1,0 +1,40 @@
+Test 20
+
+--------------------------------------------
+
+     4000 total lines to be read
+Process 0 read 4000 lines 
+ ... Total lines read: 4000
+1  processes, 10 line blocks, 4000 data lines.  Lines skipped:        0
+
+--------------------------------------------
+
+     8000 total lines to be read
+Process 1 read 2000 lines 
+Process 0 read 2000 lines 
+ ... Total lines read: 4000
+2  processes, 10 line blocks, 4000 data lines.  Lines skipped:     3599
+
+--------------------------------------------
+
+     16000 total lines to be read
+Process 0 read 1000 lines 
+ ... Total lines read: 4000
+Process 2 read 1000 lines 
+Process 1 read 1000 lines 
+Process 3 read 1000 lines 
+4  processes, 10 line blocks, 4000 data lines.  Lines skipped:    11600
+
+--------------------------------------------
+
+     32000 total lines to be read
+Process 1 read 500 lines 
+Process 3 read 500 lines 
+Process 5 read 500 lines 
+Process 7 read 500 lines 
+Process 6 read 500 lines 
+Process 2 read 500 lines 
+Process 4 read 500 lines 
+Process 0 read 500 lines 
+ ... Total lines read: 4000
+8  processes, 10 line blocks, 4000 data lines.  Lines skipped:    27598

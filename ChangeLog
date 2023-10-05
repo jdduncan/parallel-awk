@@ -1,0 +1,17 @@
+# Release
+# Date
+# Description
+
+
+0.3
+10 Feb 04
+Assign(NR,x) now accepts any expression (not just a constant number) for x.
+
+0.3
+10 Feb 04
+Implemented "barrier" statement as interface to MPI_Barrier()
+
+0.3
+10 Feb 04
+use "mpiexec" for better portability in run-test script.
+
