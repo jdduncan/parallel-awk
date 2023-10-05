@@ -1,5 +1,4 @@
 # parallel-awk
-Parallel Awk
 
 Around 2002, the farm of Apache web servers at GreatSchools.net sent all their access log messages to a single log file (using
 mod_log_spread, based on the Spread Toolkit). Unfortunately, the awk script that was analyzed a day's worth of log files was on a
